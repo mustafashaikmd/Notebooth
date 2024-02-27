@@ -1,0 +1,12 @@
+<!-- templates/feedback.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<form action="/add_feedback" method="POST">
+    <table>
+    <tr><td>Enter Your Feedback: </td><td><textarea name="feedback" placeholder="Enter your Feedback..."></textarea></td></tr><br>
+    <tr><td><button type="submit">Submit</button></td></tr>
+</form>
+
+<!-- Feedback form or content goes here -->
+{% endblock %}

@@ -1,0 +1,65 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note Making Application</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        /* Align the content to the center of the page */
+        body{
+            background-image: linear-gradient(to right, rgba(255,125,125,105), rgba(255,0,0,0));
+        }
+        h1 {
+            height: 50%;
+            margin: 0;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; /* Stack elements vertically */
+        }
+
+        /* Ensure the image is not too large */
+        img {
+            max-width: 100%;
+            height: auto;
+            /* Adjust these values as needed to fit your design */
+            max-height: 80vh;
+        }
+        button{
+            background-color: #4CAF50; /* Green background */
+            color: white; /* White text */
+            padding: 15px 32px; /* Top and bottom padding, left and right padding */
+            text-align: center; /* Center the text */
+            text-decoration: none; /* Remove underline from links */
+            display: inline-block; /* Allow setting width and height */
+            font-size: 16px; /* Text size */
+            margin: 4px 2px; /* Margin around the button */
+            cursor: pointer; /* Change mouse cursor to pointer */
+            border: none; /* Remove border */
+            border-radius: 4px; /* Rounded corners */
+            transition-duration: 0.4s; /* Transition effect duration */
+        }
+
+/* Hover effect for the button */
+    button:hover {
+            background-color: #45a049; /* Darker shade of green */
+            color: white; /* Text color remains white */
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); /* Shadow effect */
+        }
+    
+    </style>
+</head>
+<body background=>
+    <h1 style="text-align: center; font-size: 100px;"><img src="images/note.png" height="100" width="100"title="NoteBooth">Notebooth</h1>
+    <div class="menu-bar">
+        <a href="/home">Home</a>
+        <a href="/feedback">Feedback</a>
+        <a href="/contact">Contact Us</a>
+    </div>
+
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>

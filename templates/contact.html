@@ -1,0 +1,17 @@
+<!-- templates/contact.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<form action="/add_contact" method="POST"></form>
+    <table>
+        <tr><td>  <p>Feel free to get in touch.</p></td></tr>
+    <tr><td>Name :</td><td><input type="text" name="name" placeholder="Enter your Name"></input></td></tr><br>
+    <tr><td>Email Id :</td><td><input type="email" name="email" placeholder="Enter your Email"></input></td></tr><br>
+    <tr><td>Mobile Number :</td><td><input type="number" name="number" placeholder="Enter your Number"></input></td></tr><br>
+    <tr><td>Your Comments :</td><td><textarea  name="Comments" placeholder="Enter your Number"></textarea></td></tr><br>
+    <tr><td><button type="submit">Submit</button></td></tr>
+</table>
+</form>
+
+<!-- Contact information or form goes here -->
+{% endblock %}
